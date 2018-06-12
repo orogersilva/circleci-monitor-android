@@ -1,25 +1,38 @@
 apply plugin: 'com.android.feature'
 
 android {
-    compileSdkVersion 27
+
     baseFeature true
+
+    compileSdkVersion buildConfig.compileSdk
+
     defaultConfig {
-        minSdkVersion 18
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+
+        minSdkVersion buildConfig.minSdk
+        targetSdkVersion buildConfig.targetSdk
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
+
         release {
-            minifyEnabled false
+
+            minifyEnabled true
+
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets.androidTest.java.srcDirs += 'src/androidTest/kotlin'
+    sourceSets.main.java.srcDirs += 'src/main/kotlin'
+    sourceSets.test.java.srcDirs += 'src/test/kotlin'
 }
 
 dependencies {
-    api 'com.android.support:appcompat-v7:27.1.1'
-    api 'com.android.support.constraint:constraint-layout:1.1.2'
+
     application project(':app')
     feature project(':viewer')
+
+    implementation deps.kotlin.stdlib.jdk
 }

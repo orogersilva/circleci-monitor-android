@@ -1,26 +1,40 @@
 apply plugin: 'com.android.feature'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 27
+
+    compileSdkVersion buildConfig.compileSdk
+
     defaultConfig {
-        minSdkVersion 18
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+
+        minSdkVersion buildConfig.minSdk
+        targetSdkVersion buildConfig.targetSdk
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
+
+    sourceSets.androidTest.java.srcDirs += 'src/androidTest/kotlin'
+    sourceSets.main.java.srcDirs += 'src/main/kotlin'
+    sourceSets.test.java.srcDirs += 'src/test/kotlin'
 }
 
 dependencies {
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation project(':base')
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    api project(':base')
+
+    implementation deps.android.support.appCompat
+    implementation deps.android.support.constraintLayout
+    implementation deps.android.support.design
+
+    implementation deps.kotlin.stdlib.jdk
+
+    testImplementation deps.kotlin.test.jdk
+
+    androidTestImplementation deps.android.test.espresso
+    androidTestImplementation deps.android.test.runner
     
 }
