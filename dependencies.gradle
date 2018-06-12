@@ -1,7 +1,7 @@
 ext.buildConfig = [
-        'compileSdk': 27,
+        'compileSdk': 28,
         'minSdk': 18,
-        'targetSdk': 27,
+        'targetSdk': 28,
 
         'version': [
                 'major': 0,
@@ -20,24 +20,26 @@ ext.buildConfig.version['code'] =
 ext.versions = [
 
         'androidGradlePluginVersion': '3.2.0-alpha18',
-        'androidSDKVersion': '27.1.1',
         'constraintLayoutVersion': '1.1.0',
-        'espressoVersion': '3.0.2',
         'junitVersion': '4.12',
-        'kotlinVersion': '1.2.41',
-        'testRunnerVersion': '1.0.2'
+        'kotlinVersion': '1.2.41'
 ]
 
 ext.deps = [
         'android': [
-                'support': [
-                        'appCompat': "com.android.support:appcompat-v7:${versions.androidSDKVersion}",
-                        'constraintLayout': "com.android.support.constraint:constraint-layout:${versions.constraintLayoutVersion}",
-                        'design': "com.android.support:design:${versions.androidSDKVersion}"
+                'material': "com.google.android.material:material:1.0.0-alpha1"
+        ],
+        'androidX': [
+                'appCompat': "androidx.appcompat:appcompat:1.0.0-alpha1",
+                'constraintLayout': "androidx.constraintlayout:constraintlayout:${versions.constraintLayoutVersion}",
+                'ktx': [
+                        'core': "androidx.core:core-ktx:1.0.0-alpha1"
                 ],
                 'test': [
-                        'espresso': "com.android.support.test.espresso:espresso-core:${versions.espressoVersion}",
-                        'runner': "com.android.support.test:runner:${versions.testRunnerVersion}"
+                        'espresso': [
+                                'core': "androidx.test.espresso:espresso-core:3.1.0-alpha1"
+                        ],
+                        'runner': "androidx.test:runner:1.1.0-alpha1"
                 ]
         ],
         'kotlin': [

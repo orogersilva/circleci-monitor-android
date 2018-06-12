@@ -34,5 +34,7 @@ dependencies {
     application project(':app')
     feature project(':viewer')
 
+    // api deps.androidX.core.ktx
+
     implementation deps.kotlin.stdlib.jdk
 }
