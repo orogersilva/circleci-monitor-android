@@ -22,12 +22,22 @@ ext.versions = [
         'androidGradlePluginVersion': '3.2.0-alpha18',
         'constraintLayoutVersion': '1.1.0',
         'junitVersion': '4.12',
-        'kotlinVersion': '1.2.41'
+        'kotlinVersion': '1.2.41',
+        'navigationComponentVersion': '1.0.0-alpha02'
 ]
 
 ext.deps = [
         'android': [
-                'material': "com.google.android.material:material:1.0.0-alpha1"
+                'arch': [
+                        'navigation': [
+                                'fragment': "android.arch.navigation:navigation-fragment-ktx:${versions.navigationComponentVersion}",
+                                'ui': "android.arch.navigation:navigation-ui-ktx:${versions.navigationComponentVersion}"
+                        ]
+                ],
+                'material': "com.google.android.material:material:1.0.0-alpha1",
+                'test': [
+                        'navigation': "android.arch.navigation:navigation-testing-ktx:${versions.navigationComponentVersion}"
+                ]
         ],
         'androidX': [
                 'appCompat': "androidx.appcompat:appcompat:1.0.0-alpha1",

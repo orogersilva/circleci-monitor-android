@@ -31,10 +31,11 @@ android {
 
 dependencies {
 
+    api 'androidx.legacy:legacy-support-v4:1.0.0-alpha1'
     application project(':app')
     feature project(':viewer')
 
-    // api deps.androidX.core.ktx
+    api deps.androidX.ktx.core
 
     implementation deps.kotlin.stdlib.jdk
 }

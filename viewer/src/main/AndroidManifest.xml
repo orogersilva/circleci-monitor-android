@@ -3,7 +3,7 @@
     package="com.orogersilva.circlecimonitor.viewer">
 
     <application>
-        <activity android:name=".MainActivity">
+        <activity android:name=".screen.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
