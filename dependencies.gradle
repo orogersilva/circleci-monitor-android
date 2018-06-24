@@ -19,7 +19,7 @@ ext.buildConfig.version['code'] =
 
 ext.versions = [
 
-        'androidGradlePluginVersion': '3.2.0-alpha18',
+        'androidGradlePluginVersion': '3.2.0-beta01',
         'constraintLayoutVersion': '1.1.0',
         'junitVersion': '4.12',
         'kotlinVersion': '1.2.41',
@@ -34,22 +34,22 @@ ext.deps = [
                                 'ui': "android.arch.navigation:navigation-ui-ktx:${versions.navigationComponentVersion}"
                         ]
                 ],
-                'material': "com.google.android.material:material:1.0.0-alpha1",
+                'material': "com.google.android.material:material:1.0.0-alpha3",
                 'test': [
                         'navigation': "android.arch.navigation:navigation-testing-ktx:${versions.navigationComponentVersion}"
                 ]
         ],
         'androidX': [
-                'appCompat': "androidx.appcompat:appcompat:1.0.0-alpha1",
+                'appCompat': "androidx.appcompat:appcompat:1.0.0-alpha3",
                 'constraintLayout': "androidx.constraintlayout:constraintlayout:${versions.constraintLayoutVersion}",
                 'ktx': [
-                        'core': "androidx.core:core-ktx:1.0.0-alpha1"
+                        'core': "androidx.core:core-ktx:1.0.0-alpha3"
                 ],
                 'test': [
                         'espresso': [
-                                'core': "androidx.test.espresso:espresso-core:3.1.0-alpha1"
+                                'core': "androidx.test.espresso:espresso-core:3.1.0-alpha3"
                         ],
-                        'runner': "androidx.test:runner:1.1.0-alpha1"
+                        'runner': "androidx.test:runner:1.1.0-alpha3"
                 ]
         ],
         'kotlin': [
