@@ -19,10 +19,10 @@ ext.buildConfig.version['code'] =
 
 ext.versions = [
 
-        'androidGradlePluginVersion': '3.2.0-beta01',
+        'androidGradlePluginVersion': '3.2.0-beta02',
         'constraintLayoutVersion': '1.1.0',
         'junitVersion': '4.12',
-        'kotlinVersion': '1.2.41',
+        'kotlinVersion': '1.2.50',
         'navigationComponentVersion': '1.0.0-alpha02'
 ]
 
