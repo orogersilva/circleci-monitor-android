@@ -32,7 +32,7 @@ android {
 dependencies {
     
     application project(':app')
-    feature project(':viewer')
+    feature project(':feature-viewer')
 
     api deps.androidX.ktx.core
 

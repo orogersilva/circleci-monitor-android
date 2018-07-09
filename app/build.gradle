@@ -78,7 +78,7 @@ android {
 
 dependencies {
 
-    implementation project(':viewer')
+    implementation project(':feature-viewer')
 
     implementation deps.android.material
     implementation deps.androidX.appCompat

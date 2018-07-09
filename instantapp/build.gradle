@@ -2,6 +2,6 @@ apply plugin: 'com.android.instantapp'
 
 dependencies {
 
-    implementation project(':viewer')
+    implementation project(':feature-viewer')
     implementation project(':base')
 }
